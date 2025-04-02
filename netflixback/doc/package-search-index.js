@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"co.edu.unbosque.netflixback"},{"l":"co.edu.unbosque.netflixback.controller"},{"l":"co.edu.unbosque.netflixback.dto"},{"l":"co.edu.unbosque.netflixback.model"},{"l":"co.edu.unbosque.netflixback.repository"},{"l":"co.edu.unbosque.netflixback.service"}];updateSearchResults();

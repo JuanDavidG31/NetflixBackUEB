@@ -1,10 +1,4 @@
-/**
- * Servicio que maneja la lógica relacionada con las películas.
- * <p>
- * Este servicio incluye métodos para crear, obtener y eliminar películas, así como para mapear
- * objetos entre {@link Movie} y {@link MovieDTO}.
- * </p>
- */
+
 package co.edu.unbosque.netflixback.service;
 
 import java.util.ArrayList;
@@ -17,7 +11,13 @@ import org.springframework.stereotype.Service;
 import co.edu.unbosque.netflixback.dto.MovieDTO;
 import co.edu.unbosque.netflixback.model.Movie;
 import co.edu.unbosque.netflixback.repository.MovieRepository;
-
+/**
+ * Servicio que maneja la lógica relacionada con las películas.
+ * <p>
+ * Este servicio incluye métodos para crear, obtener y eliminar películas, así como para mapear
+ * objetos entre {@link Movie} y {@link MovieDTO}.
+ * </p>
+ */
 @Service
 public class MovieService {
 	/**

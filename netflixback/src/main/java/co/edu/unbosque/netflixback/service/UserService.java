@@ -1,10 +1,4 @@
-/**
- * Servicio que maneja la lógica relacionada con los usuarios.
- * <p>
- * Este servicio incluye métodos para crear, actualizar, obtener y eliminar usuarios,
- * así como para mapear objetos entre {@link User} y {@link UserDTO}.
- * </p>
- */
+
 package co.edu.unbosque.netflixback.service;
 
 import java.util.ArrayList;
@@ -18,7 +12,13 @@ import org.springframework.stereotype.Service;
 import co.edu.unbosque.netflixback.dto.UserDTO;
 import co.edu.unbosque.netflixback.model.User;
 import co.edu.unbosque.netflixback.repository.UserRepository;
-
+/**
+ * Servicio que maneja la lógica relacionada con los usuarios.
+ * <p>
+ * Este servicio incluye métodos para crear, actualizar, obtener y eliminar usuarios,
+ * así como para mapear objetos entre {@link User} y {@link UserDTO}.
+ * </p>
+ */
 @Service
 public class UserService {
 	/**

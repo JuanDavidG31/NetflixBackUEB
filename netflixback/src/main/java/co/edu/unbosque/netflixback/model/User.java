@@ -1,10 +1,4 @@
-/**
- * Entidad que representa un usuario en la base de datos.
- * <p>
- * Esta clase está mapeada a la tabla "user" en la base de datos y contiene información
- * como el identificador único, el nombre de usuario, la contraseña, el nombre completo y el correo electrónico.
- * </p>
- */
+
 package co.edu.unbosque.netflixback.model;
 
 import jakarta.persistence.Column;
@@ -13,7 +7,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+/**
+ * Entidad que representa un usuario en la base de datos.
+ * <p>
+ * Esta clase está mapeada a la tabla "user" en la base de datos y contiene información
+ * como el identificador único, el nombre de usuario, la contraseña, el nombre completo y el correo electrónico.
+ * </p>
+ */
 @Entity
 @Table(name = "user")
 public class User {

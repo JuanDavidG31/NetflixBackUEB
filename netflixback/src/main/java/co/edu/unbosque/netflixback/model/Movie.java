@@ -1,10 +1,4 @@
-/**
- * Entidad que representa una película en la base de datos.
- * <p>
- * Esta clase está mapeada a la tabla "movie" en la base de datos y contiene información
- * como el identificador único, la URL del recurso, el nombre y el género de la película.
- * </p>
- */
+
 package co.edu.unbosque.netflixback.model;
 
 import jakarta.persistence.Column;
@@ -13,7 +7,13 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
+/**
+ * Entidad que representa una película en la base de datos.
+ * <p>
+ * Esta clase está mapeada a la tabla "movie" en la base de datos y contiene información
+ * como el identificador único, la URL del recurso, el nombre y el género de la película.
+ * </p>
+ */
 @Entity
 @Table(name = "movie")
 public class Movie {

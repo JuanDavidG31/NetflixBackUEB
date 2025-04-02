@@ -1,12 +1,12 @@
+
+package co.edu.unbosque.netflixback.dto;
+
 /**
  * Clase que representa los datos de un usuario.
  * <p>
  * Esta clase contiene información como el identificador, nombre de usuario, contraseña, nombre completo y correo electrónico del usuario.
  * </p>
  */
-package co.edu.unbosque.netflixback.dto;
-
-
 public class UserDTO {
 	/**
      * Identificador único del usuario.

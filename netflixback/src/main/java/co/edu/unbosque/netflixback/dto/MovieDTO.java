@@ -1,12 +1,12 @@
 
+
+package co.edu.unbosque.netflixback.dto;
 /**
  * Clase que representa los datos de una película.
  * <p>
  * Esta clase contiene propiedades para el identificador único, la URL del recurso, el nombre y el género de la película.
  * </p>
  */
-package co.edu.unbosque.netflixback.dto;
-
 public class MovieDTO {
 	/**
      * Identificador único de la película.
