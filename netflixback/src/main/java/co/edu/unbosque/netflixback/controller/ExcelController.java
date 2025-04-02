@@ -3,10 +3,13 @@
  */
 package co.edu.unbosque.netflixback.controller;
 
+
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.http.HttpStatus;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -16,41 +19,44 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+
 import org.springframework.web.bind.annotation.RestController;
 
 import co.edu.unbosque.netflixback.dto.ExcelDTO;
 import co.edu.unbosque.netflixback.service.ExcelService;
+
 /**
  * Controlador para manejar las operaciones relacionadas con los archivos Excel.
  * <p>
- * Este controlador proporciona endpoints para crear, actualizar, obtener y eliminar archivos Excel.
+ * Este controlador proporciona endpoints para crear, actualizar, obtener y
+ * eliminar archivos Excel.
  * </p>
  */
 @RestController
 @RequestMapping("/excel")
 @CrossOrigin(origins = { "*" })
 public class ExcelController {
-	
-	 /**
-     * Servicio encargado de la lógica relacionada con los archivos Excel.
-     */
+
+	/**
+	 * Servicio encargado de la lógica relacionada con los archivos Excel.
+	 */
 	@Autowired
 	private ExcelService excelServ;
-	
+
 	/**
-     * Constructor por defecto.
-     */
+	 * Constructor por defecto.
+	 */
 	public ExcelController() {
 		// TODO Auto-generated constructor stub
 	}
 
 	/**
-     * Crea un nuevo archivo Excel a partir de un objeto JSON.
-     * 
-     * @param nuevo objeto {@link ExcelDTO} que contiene los datos del Excel
-     * @return una respuesta indicando si la creación fue exitosa o no
-     */
-	
+	 * Crea un nuevo archivo Excel a partir de un objeto JSON.
+	 * 
+	 * @param nuevo objeto {@link ExcelDTO} que contiene los datos del Excel
+	 * @return una respuesta indicando si la creación fue exitosa o no
+	 */
+
 	@PostMapping("/crearjson")
 	public ResponseEntity<String> crearConJson(@RequestBody ExcelDTO nuevo) {
 
@@ -66,12 +72,12 @@ public class ExcelController {
 	}
 
 	/**
-     * Actualiza un archivo Excel existente a partir de un objeto JSON.
-     * 
-     * @param nuevo objeto {@link ExcelDTO} con los nuevos datos
-     * @return una respuesta indicando si la actualización fue exitosa o no
-     */
-	
+	 * Actualiza un archivo Excel existente a partir de un objeto JSON.
+	 * 
+	 * @param nuevo objeto {@link ExcelDTO} con los nuevos datos
+	 * @return una respuesta indicando si la actualización fue exitosa o no
+	 */
+
 	@PutMapping("/actualizarjson")
 	public ResponseEntity<String> actualizar(@RequestBody ExcelDTO nuevo) {
 
@@ -86,11 +92,11 @@ public class ExcelController {
 	}
 
 	/**
-     * Obtiene una lista de todos los archivos Excel.
-     * 
-     * @return una lista de objetos {@link ExcelDTO} y un código de estado HTTP
-     */
-	
+	 * Obtiene una lista de todos los archivos Excel.
+	 * 
+	 * @return una lista de objetos {@link ExcelDTO} y un código de estado HTTP
+	 */
+
 	@GetMapping("/showAll")
 	public ResponseEntity<ArrayList<ExcelDTO>> showAll() {
 		ArrayList<ExcelDTO> excels = excelServ.findAll();
@@ -100,13 +106,13 @@ public class ExcelController {
 			return new ResponseEntity<>(excels, HttpStatus.ACCEPTED);
 		}
 	}
-	
+
 	/**
-     * Elimina un archivo Excel por su ID.
-     * 
-     * @param id identificador del archivo Excel a eliminar
-     * @return una respuesta indicando si la eliminación fue exitosa o no
-     */
+	 * Elimina un archivo Excel por su ID.
+	 * 
+	 * @param id identificador del archivo Excel a eliminar
+	 * @return una respuesta indicando si la eliminación fue exitosa o no
+	 */
 	@DeleteMapping("/eliminarId/{id}")
 
 	public ResponseEntity<String> deleteById(@PathVariable Integer id) {
@@ -118,20 +124,20 @@ public class ExcelController {
 		}
 	}
 
-	 /**
-     * Obtiene el servicio de Excel.
-     * 
-     * @return instancia de {@link ExcelService}
-     */
+	/**
+	 * Obtiene el servicio de Excel.
+	 * 
+	 * @return instancia de {@link ExcelService}
+	 */
 	public ExcelService getExcelServ() {
 		return excelServ;
 	}
 
 	/**
-     * Configura el servicio de Excel.
-     * 
-     * @param excelServ instancia de {@link ExcelService} a asignar
-     */
+	 * Configura el servicio de Excel.
+	 * 
+	 * @param excelServ instancia de {@link ExcelService} a asignar
+	 */
 	public void setExcelServ(ExcelService excelServ) {
 		this.excelServ = excelServ;
 	}
